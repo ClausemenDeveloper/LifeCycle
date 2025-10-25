@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--
+      TextView para exibir o estado do ciclo de vida.
+      Centralizado horizontalmente e posicionado a 32dp do topo.
+      Usar '0dp' para a largura permite que ele se ajuste às margens (16dp).
+    -->
+    <TextView
+        android:id="@+id/texto_estado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="Estado: Criado"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--
+      Botão para a Intent Explícita.
+      Ele está no centro da tela verticalmente e horizontalmente.
+      Serve como âncora para os outros botões.
+    -->
+    <Button
+        android:id="@+id/botao_intent_explicito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Segunda Atividade"
+        app:layout_constraintBottom_toTopOf="@+id/botao_intent_implicito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!--
+      Botão para a Intent Implícita.
+      Está posicionado 16dp abaixo do botão explícito, formando uma cadeia vertical.
+      A cadeia "packed" garante que eles fiquem juntos e centralizados.
+    -->
+    <Button
+        android:id="@+id/botao_intent_implicito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Discar Número"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/botao_intent_explicito" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

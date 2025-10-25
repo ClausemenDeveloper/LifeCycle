@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <!--
+        Este TextView agora está perfeitamente centralizado na tela.
+        - As constraints (top, bottom, start, end) para "parent" o prendem
+          às bordas da tela.
+        - O ConstraintLayout calcula automaticamente a posição central.
+        - A largura está como "0dp" para respeitar as margens laterais,
+          evitando que um texto muito longo vaze da tela.
+    -->
+    <TextView
+        android:id="@+id/texto_mensagem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Mensagem da MainActivity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
