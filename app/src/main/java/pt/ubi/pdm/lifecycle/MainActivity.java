@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
- * 
+ *
  * MainActivity é a tela principal da aplicação.
  * Esta classe demonstra os principais estados do ciclo de vida de uma Activity do Android,
  * exibindo o estado atual em um TextView e registrando logs.
