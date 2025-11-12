@@ -134,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
      * Ocorre quando o usuário fecha o app, o sistema precisa de memória ou
      * ocorre uma mudança de configuração que recria a Activity (como rotação de tela).
      */
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
